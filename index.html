@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>LAOSVIP</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: #000;
+    }
+
+    iframe {
+      border: none;
+      width: 100%;
+      height: 100%;
+      display: block;
+    }
+
+    #status {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      z-index: 9999;
+      color: white;
+      background: rgba(0,0,0,0.6);
+      padding: 8px 12px;
+      border-radius: 6px;
+      font-family: Arial, sans-serif;
+      font-size: 14px;
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="status">กำลังโหลด...</div>
+
+  <iframe 
+    id="frame"
+    src="https://vip888laos01-game02.store/"
+    allowfullscreen>
+  </iframe>
+
+  <script>
+    const urls = [
+      "https://vip888laos01-game02.store/"
+    ];
+
+    const statusEl = document.getElementById("status");
+    const frame = document.getElementById("frame");
+
+    function loadSite() {
+      statusEl.style.display = "none";
+      frame.src = urls[0];
+    }
+
+    loadSite();
+  </script>
+</body>
+</html>
